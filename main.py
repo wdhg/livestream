@@ -53,7 +53,7 @@ def plot(max_time, start_time):
             views = get_views()
             print(views)
         except IndexError:
-            #as a precaution
+            # as a precaution
             ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), shadow=True, ncol= len(dict_colors))
             plt.show()
         current_time = time.time()
