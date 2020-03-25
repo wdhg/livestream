@@ -58,7 +58,7 @@ def plot(max_time, start_time):
             plt.show()
         current_time = time.time()
         for x in views:
-            if(time_taken == 0):
+            if time_taken == 0:
                 ax.plot(time_taken, views[x], dict_colors[x], label = x)
                 ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), shadow=True, ncol= len(dict_colors))
             else:
