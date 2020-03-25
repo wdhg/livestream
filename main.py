@@ -50,19 +50,19 @@ def plot(max_time, start_time):
     time_taken = 0
     while time_taken < max_time:
         try:
-          views = get_views()
-          print(views)
+            views = get_views()
+            print(views)
         except IndexError:
-          #as a precaution
-          ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), shadow=True, ncol= len(dict_colors))
-          plt.show()
+            #as a precaution
+            ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), shadow=True, ncol= len(dict_colors))
+            plt.show()
         current_time = time.time()
         for x in views:
             if(time_taken ==0):
-              ax.plot(time_taken, views[x], dict_colors[x], label = x)
-              ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), shadow=True, ncol= len(dict_colors))
+                ax.plot(time_taken, views[x], dict_colors[x], label = x)
+                ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.05), shadow=True, ncol= len(dict_colors))
             else:
-              ax.plot(time_taken, views[x], dict_colors[x])
+                ax.plot(time_taken, views[x], dict_colors[x])
             print(time_taken, " ", views[x])
         time.sleep(5 + randint(0,10))
         time_taken = round(current_time - start_time) / 60
