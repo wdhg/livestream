@@ -69,6 +69,8 @@ def plot(max_time, start_time):
         print(time_taken)
 
 def main():
+    plt.xlabel('time / min')
+    plt.ylabel('views')
     plot(1, time.time())
     plt.show()
 
